@@ -1,0 +1,327 @@
+/* ==================================== */
+/* 1. Base y Navbar            */
+/* ==================================== */
+
+.home .navbar {
+    /* Usamos Flexbox para distribuir elementos */
+    display: flex;
+    align-items: center;
+    /* Alinea verticalmente al centro */
+    justify-content: space-between;
+    /* Distribuye espacio entre los grupos */
+
+    position: relative;
+    /* Se mantiene en el flujo normal del documento */
+    width: 100%;
+    height: 90px;
+    /* Altura fija para la versión de escritorio */
+    padding: 0 20px;
+    background-color: #6fa9ff;
+    border-bottom: 3px solid #003566;
+    box-sizing: border-box;
+    /* Asegura que el padding no afecte el ancho total */
+}
+
+/* ------------------------------------ */
+/* 2. Logo Area               */
+/* ------------------------------------ */
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.home .ellipse-2 {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    /* Usamos 50% para un círculo perfecto */
+    background-color: #ffffff;
+}
+
+.home .logo-3 {
+    position: absolute;
+    top: 18px;
+    /* Ajuste manual para centrar sobre el ellipse-2 */
+    left: 25px;
+    width: 50px;
+    height: 50px;
+}
+
+.home .text-wrapper-27 {
+    /* RIFFED */
+    font-family: "Poppins-ExtraBold", Helvetica;
+    font-weight: 800;
+    color: #ffffff;
+    font-size: 28px;
+    margin-left: 5px;
+    /* Ajuste para separar del logo */
+}
+
+/* ------------------------------------ */
+/* 3. Search Area             */
+/* ------------------------------------ */
+
+.search-area {
+    position: relative;
+    width: 35%;
+    /* Ocupa 35% del ancho de la Navbar */
+    max-width: 550px;
+    display: flex;
+    /* Para controlar el buscador y la lupa */
+    align-items: center;
+}
+
+.home .rectangle-12 {
+    /* Barra de input */
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 3px solid #000000;
+}
+
+.home .text-wrapper-28 {
+    /* Texto Buscador */
+    position: absolute;
+    left: 10px;
+    font-family: "Istok Web-Bold", Helvetica;
+    font-weight: 700;
+    color: #626262;
+    font-size: 16px;
+}
+
+.home .search {
+    /* Icono de Lupa */
+    position: absolute;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+}
+
+/* ------------------------------------ */
+/* 4. Navigation Actions          */
+/* ------------------------------------ */
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    /* Espacio entre links y botón */
+}
+
+.nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.nav-link img {
+    width: 25px;
+    height: 25px;
+}
+
+.home .text-wrapper-29,
+.home .text-wrapper-30,
+.home .text-wrapper-31 {
+    font-family: "Istok Web-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 14px;
+    margin-top: 5px;
+    position: relative;
+    top: auto;
+    left: auto;
+}
+
+/* Botón Iniciar Sesión */
+.login-button {
+    position: relative;
+    width: 150px;
+    height: 37px;
+}
+
+.home .rectangle-13 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 2.5px solid #003566;
+    box-shadow: 0px 4px 4px #00000040, 0px 4px 4px #00000040;
+}
+
+.home .text-wrapper-32 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Poppins-ExtraBold", Helvetica;
+    font-weight: 800;
+    color: #000000;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+/* Botón Hamburguesa (Oculto en Escritorio) */
+.menu-toggle {
+    display: none;
+    /* Oculto por defecto */
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 200;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* ==================================== */
+/* 5. Media Queries (Móvil)     */
+/* ==================================== */
+
+@media (max-width: 768px) {
+
+    .home .navbar {
+        height: 65px;
+        padding: 0 5%;
+        justify-content: space-between;
+        /* Alinear logo a la izquierda y menú a la derecha */
+    }
+
+    /* Hacemos que el Logo RIFFED se centre */
+    .logo-area {
+        width: 100%;
+        justify-content: flex-start;
+        /* Logo a la izquierda */
+    }
+
+    .home .ellipse-2 {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        /* Usamos 50% para un círculo perfecto */
+        background-color: #ffffff;
+    }
+
+    .home .logo-3 {
+        position: absolute;
+        top: 12px;
+        /* Ajuste manual para centrar sobre el ellipse-2 */
+        left: 25px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .home .text-wrapper-27 {
+        /* Ajuste para que el nombre RIFFED se vea centrado en relación con la pantalla */
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 20px;
+        margin: 0;
+    }
+
+    /* OCULTAR ELEMENTOS DE ESCRITORIO */
+    .search-area,
+    .nav-actions {
+        display: none;
+    }
+
+    /* MOSTRAR BOTÓN HAMBURGUESA */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* MENÚ DESPLEGABLE PARA MÓVIL (OFF-CANVAS) */
+    .nav-actions {
+        /* Posicionamiento y estilos para el menú lateral */
+        position: fixed;
+        top: 65px;
+        /* Debajo de la navbar */
+        right: 0;
+        height: calc(100vh - 65px);
+        /* Altura de la ventana - altura de la navbar */
+        width: 70%;
+        max-width: 300px;
+        background-color: #003566;
+        /* Fondo oscuro para el menú */
+        flex-direction: column;
+        padding: 30px 0;
+        align-items: flex-start;
+        gap: 30px;
+
+        /* Inicialmente fuera de la pantalla */
+        transform: translateX(100%);
+    }
+
+    .nav-actions.is-open {
+        display: flex;
+        position: fixed;
+        top: 65px;
+        right: 0;
+        width: 70%;
+        max-width: 300px;
+        height: calc(100vh - 65px);
+        background-color: #6fa9ff;
+        flex-direction: column;
+        padding: 30px 0;
+        gap: 30px;
+        transform: translateX(0);
+    }
+
+    /* Estilos de los links en el menú móvil */
+    .nav-link,
+    .login-button {
+        width: 100%;
+        padding: 10px 20px;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 15px;
+    }
+
+    .nav-link img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .home .text-wrapper-29,
+    .home .text-wrapper-30,
+    .home .text-wrapper-31,
+    .home .text-wrapper-32 {
+        color: #ffffff;
+        /* Texto blanco en fondo oscuro */
+        font-size: 16px;
+    }
+
+    /* Estilo especial para la opción de iniciar sesión en menú móvil */
+    .nav-actions .login-button {
+        background-color: #ffffff;
+        height: 60px;
+        font-family: "Poppins-ExtraBold", Helvetica;
+    }
+
+    .nav-actions .login-button .text-wrapper-32 {
+        color: #000000 !important;
+        /* Texto negro */
+    }
+
+    /* Ocultar rectángulo interno del botón (solo texto y fondo externo) */
+    .nav-actions .login-button .rectangle-13 {
+        display: none !important;
+    }
+}
