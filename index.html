@@ -9,150 +9,134 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/globals.css" />
     <link rel="stylesheet" href="/assets/css/styleguide.css" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/navbar.css" />
+    <link rel="stylesheet" href="/assets/css/slides.css" />
+    <link rel="stylesheet" href="/assets/css/productos.css" />
+    <link rel="stylesheet" href="/assets/css/promotional.css" />
+    <link rel="stylesheet" href="/assets/css/treding-events.css" />
+    <link rel="stylesheet" href="/assets/css/footer.css" />
 
     <!-- JavaScript -->
     <script src="/assets/js/navbar.js"></script>
+    <script src="/assets/js/slides.js"></script>
 </head>
 
 <body>
     <div class="home">
-        <footer class="footer">
-            <div class="copy">
-                <div class="group">
-                    <p class="text-wrapper">© 2023 All rights reserved</p>
-                </div>
-                <div class="frame">
-                    <img class="vector" src="img/vector-4.svg" />
-                    <img class="img" src="img/vector-5-2.svg" />
-                    <img class="img" src="img/vector-6-2.svg" />
-                    <img class="img" src="img/vector-7.svg" />
-                    <img class="img" src="img/vector-8-3.svg" />
-                    <img class="img" src="img/vector-9-2.svg" />
-                    <img class="img" src="img/vector-10-2.svg" />
-                    <img class="img" src="img/vector-11.svg" />
-                    <img class="img" src="img/vector-12-3.svg" />
-                    <img class="img" src="img/vector-13-4.svg" />
-                </div>
+
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="logo-area">
+                <div class="ellipse-2"></div>
+                <img class="logo-3" src="assets/img/Logo2.png" alt="Logo RIFFED" />
+                <div class="text-wrapper-27">RIFFED</div>
             </div>
-            <img class="vector-2" src="img/vector-13-3.svg" />
-            <img class="vector-3" src="img/vector-14-3.svg" />
-            <p class="div">© 2025 RIFFED. Todos los derechos reservados.</p>
-            <img class="mask-group" src="img/mask-group-7.png" />
-            <div class="contact">
-                <div class="frame-2">
-                    <div class="text-wrapper-2">Contacto</div>
-                    <img class="group-2" src="img/group-5496.png" />
-                </div>
-                <div class="frame-3">
-                    <div class="div-2">
-                        <img class="mask-group-2" src="img/image.png" />
-                        <p class="text-wrapper-3">44 Danwers,&nbsp;&nbsp;Ny City, Usa, 70-102</p>
-                    </div>
-                    <div class="div-2">
-                        <img class="mask-group-2" src="img/mask-group-3.png" />
-                        <input class="teamriffed-gmail-com" placeholder="Teamriffed@gmail.com" type="email" />
-                    </div>
-                    <div class="div-2">
-                        <img class="mask-group-2" src="img/mask-group-5.png" />
-                        <div class="text-wrapper-3">91+585-656-658</div>
-                    </div>
-                </div>
+            <div class="search-area">
+                <div class="rectangle-12"></div>
+                <div class="text-wrapper-28">Buscador</div>
+                <img class="search" src="assets/img/lupa.png" alt="Icono Buscador" />
             </div>
-            <div class="blog">
-                <div class="frame-4">
-                    <div class="text-wrapper-4">Blog</div>
-                    <img class="group-2" src="img/group-5487.png" />
+            <div class="nav-actions">
+                <div class="nav-link">
+                    <img class="img-3" src="assets/img/icons8-casa-100.png" alt="Icono Inicio" />
+                    <div class="text-wrapper-29">Inicio</div>
                 </div>
-                <div class="frame-2">
-                    <div class="frame-5">
-                        <div class="mask-group-wrapper"><img class="mask-group-3" src="img/mask-group-8.png" /></div>
-                        <div class="people-saying-about">
-                            <div class="text-wrapper-5">8 Nov, 2021</div>
-                            <div class="people-saying-about-2">People Saying About<br />footer.</div>
-                        </div>
-                    </div>
-                    <div class="frame-5">
-                        <div class="mask-group-wrapper"><img class="mask-group-3" src="img/mask-group-4.png" /></div>
-                        <div class="people-saying-about">
-                            <div class="text-wrapper-5">8 Nov, 2021</div>
-                            <div class="people-saying-about-2">People Saying About<br />footer.</div>
-                        </div>
-                    </div>
+                <div class="nav-link">
+                    <img class="shopping-bag" src="assets/img/icons8-insignia-100.png" alt="Icono Ofertas" />
+                    <div class="text-wrapper-30">Ofertas</div>
                 </div>
+                <div class="nav-link">
+                    <div class="shopping-cart">
+                        <img class="icon-2" src="assets/img/icons8-bolsa-de-compras-100.png" alt="Icono Carrito" />
+                    </div>
+                    <div class="text-wrapper-31">Carrito</div>
+                </div>
+                <button class="login-button">
+                    Iniciar Sesion
+                </button>
             </div>
-            <div class="quick-link">
-                <div class="frame-2">
-                    <div class="text-wrapper-4">Quick Link</div>
-                    <img class="group-3" src="img/group-5488.png" />
-                </div>
-                <div class="frame-3">
-                    <div class="frame-6">
-                        <img class="mask-group-4" src="img/mask-group-6.png" />
-                        <div class="text-wrapper-3">Inico</div>
-                    </div>
-                    <div class="frame-6">
-                        <img class="mask-group-4" src="img/mask-group-2.png" />
-                        <div class="text-wrapper-3">Sobre Nosotros</div>
-                    </div>
-                    <div class="frame-6">
-                        <img class="mask-group-4" src="img/mask-group.png" />
-                        <div class="text-wrapper-3">Terminos Y Condiciones</div>
-                    </div>
-                </div>
+            <!-- Botón de Menú Hamburguesa (Solo Móvil) -->
+            <div class="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
-            <div class="logo">
-                <div class="vive-la-m-sica-con-wrapper">
-                    <p class="vive-la-m-sica-con">
-                        Vive la música con RIFFED.<br />
-                        Ropa, accesorios y equipo técnico para quienes crean su propio sonido.
-                    </p>
-                </div>
-                <img class="frame-7" src="img/frame-3.svg" />
-            </div>
-            <img class="logo-2" src="img/logo-1.png" />
-            <div class="text-wrapper-6">RIFFED</div>
-        </footer>
-        <div class="treding-events">
-            <div class="rectangle"></div>
-            <div class="text-wrapper-7">Treding Events</div>
-            <div class="rectangle-2"></div>
-            <div class="rectangle-3"></div>
-            <div class="rectangle-4"></div>
-            <div class="rectangle-5"></div>
-            <div class="rectangle-6"></div>
-            <div class="rectangle-7"></div>
-            <div class="text-wrapper-8">Sabrina Carpenter</div>
-            <div class="text-wrapper-9">Sabrina Carpenter</div>
-            <div class="text-wrapper-10">Adele</div>
-            <div class="text-wrapper-11">Adele</div>
-            <div class="text-wrapper-12">Deadmau5</div>
-            <div class="text-wrapper-13">Deadmau5</div>
-            <div class="text-wrapper-14">28 Oct - $1200</div>
-            <div class="text-wrapper-15">28 Oct - $1200</div>
-            <div class="text-wrapper-16">30 Oct - $1300</div>
-            <div class="text-wrapper-17">30 Oct - $1300</div>
-            <div class="text-wrapper-18">20 Nov - $1500</div>
-            <div class="text-wrapper-19">20 Nov - $1500</div>
-            <div class="music-note"><img class="icon" src="img/icon.svg" /></div>
-            <div class="icon-wrapper"><img class="icon" src="img/icon-2.svg" /></div>
-            <div class="img-wrapper"><img class="icon" src="img/icon-4.svg" /></div>
-            <div class="music-note-2"><img class="icon" src="img/icon-6.svg" /></div>
-            <div class="music-note-3"><img class="icon" src="img/icon-5.svg" /></div>
-            <div class="music-note-4"><img class="icon" src="img/icon-3.svg" /></div>
-            <img class="image" src="img/image-1.png" />
-            <img class="image-2" src="img/image-4.png" />
-            <img class="image-3" src="img/image-2.png" />
-            <img class="image-4" src="img/image-5.png" />
-            <img class="image-5" src="img/image-3.png" />
-            <img class="image-6" src="img/image-6.png" />
         </div>
+
+        <!-- Slides -->
+        <div class="slider">
+            <div class="content">
+                <div class="carousel">
+                    <div class="slide-card slides-box">
+                        <img src="assets/img/guitarra.png" class="img-slide">
+                        <div class="slide-overlay">
+                            <h2 class="slide-title">Potencia tu sonido</h2>
+                            <p class="slide-subtitle">Guitarras con hasta 20 % de descuento por tiempo limitado.</p>
+                            <a href="#" class="slide-btn">Ver Guitarras</a>
+                        </div>
+                    </div>
+
+                    <div class="slide-card slides-box2">
+                        <img src="assets/img/coleccion.png" class="img-slide">
+                        <div class="slide-overlay">
+                            <h2 class="slide-title">Lleva el ritmo contigo</h2>
+                            <p class="slide-subtitle">Encuentra accesorios que gritan actitud y musica.</p>
+                            <a href="#" class="slide-btn">Comprar accesorios</a>
+                        </div>
+                    </div>
+
+                    <div class="slide-card slides-box3">
+                        <img src="assets/img/coleccion riffed.png" class="img-slide">
+                        <div class="slide-overlay">
+                            <h2 class="slide-title">Edicion Limitada</h2>
+                            <p class="slide-subtitle">No dejes que se agote tu estilo.</p>
+                            <a href="#" class="slide-btn">Ver coleccion</a>
+                        </div>
+                    </div>
+
+                    <div class="slide-card slides-box4">
+                        <img src="assets/img/equipo-instrumental.png" class="img-slide">
+                        <div class="slide-overlay">
+                            <h2 class="slide-title">Tu música empieza aquí</h2>
+                            <p class="slide-subtitle">Encuentra el equipo perfecto para tu proxima canción.</p>
+                            <a href="#" class="slide-btn">Explorar productos</a>
+                        </div>
+                    </div>
+
+                    <div class="slide-card slides-box5">
+                        <img src="assets/img/vibra-riffed.png" class="img-slide">
+                        <div class="slide-overlay">
+                            <h2 class="slide-title">El sonido del estilo</h2>
+                            <p class="slide-subtitle">No solo escuches música...llévala contigo.</p>
+                            <a href="#" class="slide-btn">Únirme a RIFFED</a>
+                        </div>
+                    </div>
+
+                    <div class="slides-navigation">
+                        <div class="slide-indicator" id="dots-container">
+                            <button class="nav-arrow prev-btn">&#10094;</button>
+                            <div class="dot-indictaor active"></div>
+                            <div class="dot-indictaor"></div>
+                            <div class="dot-indictaor"></div>
+                            <div class="dot-indictaor"></div>
+                            <div class="dot-indictaor"></div>
+                            <button class="nav-arrow next-btn">&#10095;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Productos -->
         <div class="productos">
+            <div class="text-wrapper-23">Productos</div>
             <div class="producto">
                 <div class="rectangle-8"></div>
                 <img class="gemini-generated" src="img/gemini-generated-image-at1n92at1n92at1n-1-6.png" />
@@ -201,111 +185,251 @@
                 <div class="rectangle-9"></div>
                 <div class="text-wrapper-22">Agregar al carrito</div>
             </div>
-            <div class="text-wrapper-23">Productos</div>
-        </div>
-        <div class="promocional">
-            <div class="rectangle-10"></div>
-            <p class="p">Hey, no te vayas sin unirte a nuestra comunidad</p>
-            <p class="text-wrapper-24">¡Recibe descuentos y novedades exclusivas!</p>
-            <div class="rectangle-11"></div>
-            <div class="text-wrapper-25">¡Unete!</div>
-            <div class="ellipse"></div>
-            <img class="removebg" src="img/mascota2-removebg-preview-1.png" />
-            <div class="copy-2">
-                <div class="group">
-                    <p class="text-wrapper-26">© 2023 All rights reserved</p>
-                </div>
-                <div class="frame">
-                    <img class="vector-4" src="img/vector-4-3.svg" />
-                    <img class="vector-5" src="img/image.svg" />
-                    <img class="vector-5" src="img/vector-6.svg" />
-                    <img class="vector-5" src="img/vector-7-3.svg" />
-                    <img class="vector-5" src="img/vector-8.svg" />
-                    <img class="vector-5" src="img/vector-9-3.svg" />
-                    <img class="vector-5" src="img/vector-10.svg" />
-                    <img class="vector-5" src="img/vector-11-2.svg" />
-                    <img class="vector-5" src="img/vector-12.svg" />
-                    <img class="vector-6" src="img/vector-13.svg" />
-                </div>
+            <div class="producto-7">
+                <div class="rectangle-8"></div>
+                <img class="gemini-generated" src="img/gemini-generated-image-at1n92at1n92at1n-1-2.png" />
+                <div class="text-wrapper-20">Camisa Negra</div>
+                <div class="text-wrapper-21">$1200.00</div>
+                <div class="rectangle-9"></div>
+                <div class="text-wrapper-22">Agregar al carrito</div>
             </div>
-            <img class="vector-7" src="img/vector-13-5.svg" />
-            <img class="vector-8" src="img/vector-14-2.svg" />
-            <img class="vector-9" src="img/vector-13-6.svg" />
-            <img class="vector-10" src="img/vector-14.svg" />
-            <div class="copy-3">
-                <div class="group">
-                    <p class="text-wrapper">© 2023 All rights reserved</p>
-                </div>
-                <div class="frame">
-                    <img class="vector-11" src="img/vector-4-2.svg" />
-                    <img class="img" src="img/vector-5.svg" />
-                    <img class="img" src="img/vector-6-3.svg" />
-                    <img class="img" src="img/vector-7-2.svg" />
-                    <img class="img" src="img/vector-8-2.svg" />
-                    <img class="img" src="img/vector-9.svg" />
-                    <img class="img" src="img/vector-10-3.svg" />
-                    <img class="img" src="img/vector-11-3.svg" />
-                    <img class="img" src="img/vector-12-2.svg" />
-                    <img class="img" src="img/vector-13-2.svg" />
-                </div>
+            <div class="producto-8">
+                <div class="rectangle-8"></div>
+                <img class="gemini-generated" src="img/gemini-generated-image-at1n92at1n92at1n-1-2.png" />
+                <div class="text-wrapper-20">Camisa Negra</div>
+                <div class="text-wrapper-21">$1200.00</div>
+                <div class="rectangle-9"></div>
+                <div class="text-wrapper-22">Agregar al carrito</div>
             </div>
         </div>
-        <div class="slider">
-            <div class="content">
-                <div class="carousel">
-                    <img class="slides-box" src="img/slides-box.svg" />
-                    <div class="slides-navigation">
-                        <div class="click-area"><img class="img-2" src="img/arrow-left.svg" /></div>
-                        <div class="slide-indicator">
-                            <div class="dot-indictaor"></div>
-                            <div class="dot-indictaor-2"></div>
-                            <div class="dot-indictaor-2"></div>
-                            <div class="dot-indictaor-2"></div>
-                            <div class="dot-indictaor-2"></div>
+
+        <!-- promotional section -->
+        <div class="promocional-container">
+
+            <!-- 1. OLAS REPETIDAS ARRIBA -->
+            <div class="ola-repetida top"></div>
+
+            <!-- 2. RECTÁNGULO (fondo azul) -->
+            <div class="promocional">
+                <div class="promo-content-wrapper">
+
+                    <div class="mascota-container">
+                        <div class="fondo-mascota"></div>
+                        <img class="mascota-img" src="assets/img/Mascota 3d.png" alt="Mascota" />
+                    </div>
+
+                    <div class="info-container">
+                        <p class="titulo-promo">Hey, no te vayas sin unirte a nuestra comunidad</p>
+                        <p class="subtitulo-promo">¡Recibe descuentos y novedades exclusivas!</p>
+
+                        <div class="btn-container">
+                            <div class="btn-unete">¡Unete!</div>
                         </div>
-                        <div class="click-area"><img class="img-2" src="img/arrow-right.svg" /></div>
                     </div>
+
                 </div>
+            </div>
+
+            <!-- 3. OLAS REPETIDAS ABAJO -->
+            <div class="ola-repetida bottom"></div>
+
+        </div>
+
+        <!-- treding events -->
+        <div class="treding-events-section">
+            <div class="section-title">Trending Events</div>
+
+            <div class="events-grid">
+
+                <div class="event-card">
+                    <div class="card-image-wrapper">
+                        <img class="event-img" src="img/image-1.png" alt="Sabrina Carpenter" />
+                    </div>
+                    <div class="card-info">
+                        <h3 class="event-name">Sabrina Carpenter</h3>
+                        <p class="event-details">28 Oct - $1200</p>
+                    </div>
+
+                    <i class="fa-solid fa-music music-icon"></i>
+                </div>
+
+                <div class="event-card">
+                    <div class="card-image-wrapper">
+                        <img class="event-img" src="img/image-2.png" alt="Adele" />
+                    </div>
+                    <div class="card-info">
+                        <h3 class="event-name">Adele</h3>
+                        <p class="event-details">30 Oct - $1300</p>
+                    </div>
+
+                    <i class="fa-solid fa-music music-icon"></i>
+                </div>
+
+                <div class="event-card">
+                    <div class="card-image-wrapper">
+                        <img class="event-img" src="img/image-5.png" alt="Deadmau5" />
+                    </div>
+                    <div class="card-info">
+                        <h3 class="event-name">Deadmau5</h3>
+                        <p class="event-details">30 Oct - $1300</p>
+                    </div>
+
+                    <i class="fa-solid fa-music music-icon"></i>
+                </div>
+
+                <div class="event-card">
+                    <div class="card-image-wrapper">
+                        <img class="event-img" src="img/image-3.png" alt="Sabrina Carpenter" />
+                    </div>
+                    <div class="card-info">
+                        <h3 class="event-name">Sabrina Carpenter</h3>
+                        <p class="event-details">20 Nov - $1500</p>
+                    </div>
+
+                    <i class="fa-solid fa-music music-icon"></i>
+                </div>
+
+                <div class="event-card">
+                    <div class="card-image-wrapper">
+                        <img class="event-img" src="img/image-3.png" alt="Sabrina Carpenter" />
+                    </div>
+                    <div class="card-info">
+                        <h3 class="event-name">Sabrina Carpenter</h3>
+                        <p class="event-details">20 Nov - $1500</p>
+                    </div>
+
+                    <i class="fa-solid fa-music music-icon"></i>
+                </div>
+
+                <div class="event-card">
+                    <div class="card-image-wrapper">
+                        <img class="event-img" src="img/image-3.png" alt="Sabrina Carpenter" />
+                    </div>
+                    <div class="card-info">
+                        <h3 class="event-name">Sabrina Carpenter</h3>
+                        <p class="event-details">20 Nov - $1500</p>
+                    </div>
+
+                    <i class="fa-solid fa-music music-icon"></i>
+                </div>
+
+                <div class="event-card">
+                    <div class="card-image-wrapper">
+                        <img class="event-img" src="img/image-3.png" alt="Sabrina Carpenter" />
+                    </div>
+                    <div class="card-info">
+                        <h3 class="event-name">Sabrina Carpenter</h3>
+                        <p class="event-details">20 Nov - $1500</p>
+                    </div>
+
+                    <i class="fa-solid fa-music music-icon"></i>
+                </div>
+
+                <div class="event-card">
+                    <div class="card-image-wrapper">
+                        <img class="event-img" src="img/image-3.png" alt="Sabrina Carpenter" />
+                    </div>
+                    <div class="card-info">
+                        <h3 class="event-name">Sabrina Carpenter</h3>
+                        <p class="event-details">20 Nov - $1500</p>
+                    </div>
+
+                    <i class="fa-solid fa-music music-icon"></i>
+                </div>
+
             </div>
         </div>
-        <div class="navbar">
-            <div class="logo-area">
-                <div class="ellipse-2"></div>
-                <img class="logo-3" src="assets/img/Logo2.png" alt="Logo RIFFED" />
-                <div class="text-wrapper-27">RIFFED</div>
-            </div>
-            <div class="search-area">
-                <div class="rectangle-12"></div>
-                <div class="text-wrapper-28">Buscador</div>
-                <img class="search" src="assets/img/lupa.png" alt="Icono Buscador" />
-            </div>
-            <div class="nav-actions">
-                <div class="nav-link">
-                    <img class="img-3" src="assets/img/icons8-casa-100.png" alt="Icono Inicio" />
-                    <div class="text-wrapper-29">Inicio</div>
-                </div>
-                <div class="nav-link">
-                    <img class="shopping-bag" src="assets/img/icons8-insignia-100.png" alt="Icono Ofertas" />
-                    <div class="text-wrapper-30">Ofertas</div>
-                </div>
-                <div class="nav-link">
-                    <div class="shopping-cart">
-                        <img class="icon-2" src="assets/img/icons8-bolsa-de-compras-100.png" alt="Icono Carrito" />
+
+        <!-- footer -->
+        <footer class="footer">
+
+            <div class="footer-content">
+
+                <div class="footer-column brand-col">
+                    <div class="logo-area">
+                        <img class="logo-img" src="assets/img/Logo2.png" alt="RIFFED Logo" />
+                        <span class="logo-text">RIFFED</span>
                     </div>
-                    <div class="text-wrapper-31">Carrito</div>
+                    <p class="brand-desc">
+                        Vive la música con RIFFED.<br>
+                        Ropa, accesorios y equipo técnico para quienes crean su propio sonido.
+                    </p>
+
+                    <div class="social-buttons">
+                        <a href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-btn"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-btn"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
                 </div>
-                <div class="login-button">
-                    <div class="rectangle-13"></div>
-                    <div class="text-wrapper-32">Iniciar Sesion</div>
+
+                <div class="footer-column">
+                    <h4 class="col-title">Quick Link</h4>
+                    <ul class="footer-links">
+                        <li>
+                            <i class="fa-solid fa-chevron-right arrow-icon"></i>
+                            Inicio
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-chevron-right arrow-icon"></i>
+                            Sobre Nosotros
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-chevron-right arrow-icon"></i>
+                            Términos y Condiciones
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="col-title">Blog</h4>
+
+                    <div class="blog-item">
+                        <i class="fa-solid fa-chevron-right arrow-icon"></i>
+                        <div class="blog-info">
+                            <span class="date">8 Nov, 2025</span>
+                            <p>5 Tips para cuidar tu guitarra.</p>
+                        </div>
+                    </div>
+
+                    <div class="blog-item">
+                        <i class="fa-solid fa-chevron-right arrow-icon"></i>
+                        <div class="blog-info">
+                            <span class="date">2 Nov, 2025</span>
+                            <p>El equipo esencial para tu Home Studio.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="col-title">Contacto <img src="img/group-5496.png" class="title-decoration"></h4>
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fa-solid fa-location-dot contact-icon-fa"></i>
+                            44 Danwers, NY City, USA
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope contact-icon-fa"></i>
+                            Teamriffed@gmail.com
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone contact-icon-fa"></i>
+                            91+585-656-658
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <!-- Botón de Menú Hamburguesa (Solo Móvil) -->
-            <div class="menu-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+
+            <div class="footer-bottom-container">
+                <div class="ola-footer"></div>
+
+                <div class="copyright-bar">
+                    <p>© 2025 RIFFED. Todos los derechos reservados.</p>
+                </div>
             </div>
-        </div>
+        </footer>
+
     </div>
 </body>
+
 </html>

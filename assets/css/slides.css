@@ -1,0 +1,273 @@
+.home .slider {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  /* el tamaño máximo del slider */
+  margin: auto;
+  /* centra horizontalmente */
+  height: auto;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.home .content {
+  display: flex;
+  margin-top: 40px;
+  width: 100%;
+  /* CAMBIO: De 1200px a 100% para que use el espacio real */
+  max-width: 1200px;
+  /* CAMBIO: Agregamos límite para pantallas grandes */
+  margin-left: 0;
+  /* CAMBIO: De 41px a 0. Esto quitara el empuje a la derecha */
+  padding: 0 20px;
+  /* Agregamos padding para que no pegue a los bordes en movil */
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  box-sizing: border-box;
+  /* Importante para que el padding no rompa el ancho */
+}
+
+.home .carousel {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 450px; /* Altura suficiente para las imágenes */
+    position: relative;
+    perspective: 1000px; /* Agrega profundidad 3D opcional */
+    overflow: visible; /* Permite ver las sombras */
+}
+
+/* --- 2. ESTILO BASE PARA TODAS LAS CARTAS (SLIDES) --- */
+.home .slide-card {
+    position: absolute;
+    top: 0;
+    left: 50%; /* Todas inician en el centro horizontal */
+    width: 100%;
+    max-width: 900px;
+    height: 400px;
+    border-radius: 20px;
+    object-fit: cover;
+    
+    /* LA MAGIA: Transición suave de transformación */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, z-index 0s;
+    
+    /* Sombra para dar profundidad */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Asegurar que la imagen dentro llene la tarjeta */
+.home .img-slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* --- 3. POSICIONES (usando TRANSFORM) --- */
+
+/* CENTRO (Slide Principal) */
+.home .slides-box {
+    z-index: 5;
+    opacity: 1;
+    /* Se centra restando el 50% de su propio ancho */
+    transform: translateX(-50%) scale(1);
+}
+
+/* IZQUIERDA CERCANA */
+.home .slides-box2 {
+    z-index: 4;
+    opacity: 1;
+    /* Se mueve a la izquierda (-70%) y se hace más chica (0.8) */
+    transform: translateX(-70%) scale(0.8);
+}
+
+/* IZQUIERDA LEJANA */
+.home .slides-box3 {
+    z-index: 3;
+    opacity: 1;
+    /* Se mueve más a la izquierda (-90%) y más chica (0.6) */
+    transform: translateX(-90%) scale(0.6);
+}
+
+/* DERECHA CERCANA */
+.home .slides-box4 {
+    z-index: 4;
+    opacity: 1;
+    /* Se mueve a la derecha (-30% es el balance visual para el lado derecho) */
+    transform: translateX(-30%) scale(0.8);
+}
+
+/* DERECHA LEJANA */
+.home .slides-box5 {
+    z-index: 3;
+    opacity: 1;
+    /* Se mueve más a la derecha (-10%) */
+    transform: translateX(-10%) scale(0.6);
+}
+
+.home .slides-box {
+  z-index: 5;
+  /* imagen de adelante */
+}
+
+.home .slides-box2 {
+  z-index: 4;
+  /* imagen de atrás */
+}
+
+.home .slides-box3 {
+  z-index: 3;
+  /* imagen de atrás */
+}
+
+.home .slides-box4 {
+  z-index: 2;
+  /* imagen de atrás */
+}
+
+.home .slides-box5 {
+  z-index: 1;
+  /* imagen de atrás */
+}
+
+/* --- CONTENEDOR DEL TEXTO SOBRE LA IMAGEN --- */
+.home .slide-overlay {
+    position: absolute;
+    bottom: 40px; /* Posición desde abajo */
+    left: 40px;   /* Posición desde la izquierda */
+    z-index: 10;
+    color: #ffffff;
+    max-width: 80%; /* Para que el texto no se salga si es muy largo */
+    
+    /* TRUCO: Ocultamos el texto por defecto (para los slides de atrás) */
+    opacity: 0; 
+    transform: translateY(20px); /* Efecto de entrada desde abajo */
+    transition: all 0.4s ease-in-out;
+    pointer-events: none; /* Evita clicks accidentales cuando está invisible */
+}
+
+/* --- SOLO MOSTRAR TEXTO EN EL SLIDE CENTRAL --- */
+/* Cuando el .slide-card tiene la clase .slides-box (el activo) */
+.home .slides-box .slide-overlay {
+    opacity: 1; /* Se hace visible */
+    transform: translateY(0); /* Sube a su posición original */
+    pointer-events: all; /* Reactiva el botón */
+    transition-delay: 0.3s; /* Espera un poquito a que termine de moverse el slide */
+}
+
+/* --- TÍTULO (Negritas) --- */
+.home .slide-title {
+    font-family: "Poppins", Helvetica, sans-serif;
+    font-size: 36px;       /* Un poco más grande para impactar */
+    font-weight: 800;      /* 800 es Extra Bold */
+    margin: 0 0 5px 0;     /* Poco margen abajo para pegarlo al subtítulo */
+    text-shadow: 0 2px 5px rgba(0,0,0,0.6);
+    line-height: 1.1;      /* Mejor espaciado entre líneas si el título es largo */
+}
+
+/* --- SUBTÍTULO (No negritas) --- */
+.home .slide-subtitle {
+    font-family: "Poppins", Helvetica, sans-serif;
+    font-size: 18px;       /* Tamaño mediano */
+    font-weight: 400;      /* 400 es Regular/Normal */
+    margin: 0 0 20px 0;    /* Espacio antes del botón */
+    color: #f0f0f0;        /* Un blanco apenas grisáceo para diferenciar */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+/* --- DISEÑO DEL BOTÓN --- */
+.home .slide-btn {
+    display: inline-block; /* Permite que el ancho se ajuste al texto */
+    padding: 12px 24px;    /* Relleno interno: Esto define el tamaño según el texto */
+    background-color: #ffffff; /* Tu color azul */
+    color: #000000;
+    text-decoration: none; /* Quita el subrayado de enlace */
+    border-radius: 30px;   /* Bordes redondos */
+    font-family: "Poppins", Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase; /* Opcional: todo mayúsculas */
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    
+    /* Sombra suave */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* Hover del botón */
+.home .slide-btn:hover {
+    background-color: #6fa9ff; /* Azul más claro al pasar el mouse */
+    color: #ffffff;
+    transform: scale(1.05);    /* Crece un poquito */
+}
+
+.home .img-2 {
+  position: absolute;
+  width: auto;
+  /* Mantiene las proporciones originales de la imagen */
+  height: auto;
+  /* Ajusta la altura para llenar el contenedor */
+  object-fit: cover;
+  /* Recorta la imagen para llenar el contenedor sin deformarla */
+  object-position: center;
+  /* Cambia esta propiedad para decidir qué parte de la imagen se 
+  muestra */
+  left: 50px;
+}
+
+.home .slide-indicator {
+    /* POSICIONAMIENTO */
+    position: absolute;  /* Lo fijamos con coordenadas */
+    bottom: -25px;        /* Lo pegamos al fondo del contenedor carousel */
+    left: 0;
+    width: 100%;
+    /* VISIBILIDAD */
+    z-index: 20;         /* Debe ser mayor que 5 (el z-index de tus fotos) */
+    /* DISEÑO (Lo que ya tenías) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.home .dot-indictaor {
+  /* Estilo base del punto */
+  width: 10px;
+  height: 10px;
+  background-color: var(--carouselgray, #ccc);
+  /* Color gris por defecto */
+  border-radius: 50%;
+  margin: 0 5px;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+/* Cuando el punto está activo (clase que pone JS) */
+.home .dot-indictaor.active {
+    background-color: #003566; /* Azul oscuro */
+    opacity: 1;
+    transform: scale(1.2); /* Un poco más grande */
+}
+
+/* Estilos para las flechas de navegación */
+.home .nav-arrow {
+    background: none;       /* Quita el fondo gris de botón por defecto */
+    border: none;           /* Quita el borde */
+    font-size: 24px;        /* Tamaño de la flecha */
+    color: #003566;         /* Color azul oscuro (mismo que tus puntos activos) */
+    cursor: pointer;        /* Manita al pasar el mouse */
+    padding: 0 15px;        /* Espacio para que sea fácil hacer click */
+    transition: transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Efecto al pasar el mouse */
+.home .nav-arrow:hover {
+    transform: scale(1.2);  /* Se hace un poco más grande */
+    color: #6fa9ff;         /* Cambia a azul claro */
+}

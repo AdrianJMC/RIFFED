@@ -1,0 +1,242 @@
+/* =========================================
+   FOOTER GENERAL
+   ========================================= */
+.home .footer {
+    position: relative; /* Clave: Relativo al flujo de la página */
+    width: 100%;
+    background-color: #ffffff;
+    margin-top: 50px; /* Separación de la sección anterior */
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================================
+   GRILLA DE CONTENIDO (4 COLUMNAS)
+   ========================================= */
+.home .footer-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+    gap: 40px;
+    margin-bottom: 50px; /* Espacio antes de la ola */
+}
+
+/* Títulos de columnas */
+.home .col-title {
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+/* Ocultamos las imágenes viejas que tenías dentro del h4 */
+.home .title-decoration { 
+    display: none; 
+}
+
+/* CREACIÓN DEL ZIG-ZAG AMARILLO */
+.home .col-title::after {
+    content: "";
+    display: block;
+    width: 48px; /* Qué tan largo quieres el zig-zag */
+    height: 8px; /* Altura de las ondas */
+    
+    /* DIBUJO DEL ZIG-ZAG EN SVG (Color #FEC00F) */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='10' viewBox='0 0 20 10'%3E%3Cpath fill='none' stroke='%23FEC00F' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' d='M0 10L10 0l10 10'/%3E%3C/svg%3E");
+    
+    background-repeat: repeat-x; /* Repetir el patrón horizontalmente */
+    background-size: 6px 100%; /* Tamaño de cada 'pico' del zig-zag */
+}
+
+/* Estilos de Logo */
+.home .brand-col .logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.home .logo-img { width: 50px; height: auto; }
+.home .logo-text {
+    font-family: "Poppins-ExtraBold", Helvetica;
+    font-size: 28px;
+    font-weight: 800;
+}
+.home .brand-desc {
+    font-family: "Poppins-Light", Helvetica;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Listas (Links y Contacto) */
+.home .footer-links, .home .contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.home .footer-links li, .home .contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 14px;
+    color: #333;
+}
+.home .link-icon, .home .contact-icon { width: 15px; height: auto; }
+
+/* Blog Items */
+.home .blog-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.home .blog-thumb { width: 50px; height: 50px; object-fit: cover; border-radius: 5px; }
+.home .blog-info { display: flex; flex-direction: column; }
+.home .blog-info .date { font-size: 12px; color: #666; font-family: "Poppins-Regular", Helvetica; }
+.home .blog-info p { font-size: 14px;  margin: 4px 0 4px 0; font-family: "Poppins-Regular", Helvetica;  }
+
+/* =========================================
+   SHAPE DIVIDER (LA OLA AL FINAL)
+   ========================================= */
+.home .footer-bottom-container {
+    width: 100%;
+    position: relative;
+    margin-top: auto; /* Empuja esto al final si sobra espacio */
+}
+
+/* LA OLA */
+.home .ola-footer {
+    width: 100%;
+    height: 30px; /* Altura de la ola */
+    
+    /* El color de la ola debe coincidir con el color de fondo del Copyright (#003566 azul oscuro o #000 negro) */
+    background-color: #6fa9ff; 
+
+    /* MÁSCARA SVG (La misma que usaste antes) */
+    --mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 120 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10 Q 30 0 60 10 T 120 10 V20 H0 Z' fill='%23000'/%3E%3C/svg%3E");
+    
+    -webkit-mask-image: var(--mask);
+    mask-image: var(--mask);
+    -webkit-mask-repeat: repeat-x;
+    mask-repeat: repeat-x;
+    -webkit-mask-size: 60px 100%; /* Ajusta el ancho de las curvas aquí */
+    mask-size: 60px 100%;
+    
+    /* Invertimos para que la parte plana quede abajo (pegada a la barra de copyright) y las olas arriba */
+    margin-bottom: -10px; /* Arreglo para eliminar lineas blancas */
+}
+
+/* BARRA DE COPYRIGHT */
+.home .copyright-bar {
+    width: 100%;
+    background-color: #6fa9ff; /* Mismo color que la ola */
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 14px;
+}
+
+/* =========================================
+   RESPONSIVE (MÓVIL)
+   ========================================= */
+@media (max-width: 900px) {
+    .home .footer-content {
+        grid-template-columns: 1fr; /* Una sola columna en celular */
+        text-align: center;
+        gap: 50px;
+    }
+    
+    /* Centrar elementos flex en móvil */
+    .home .col-title, 
+    .home .brand-col .logo-area,
+    .home .footer-links li, 
+    .home .contact-list li,
+    .home .blog-item {
+        justify-content: center;
+    }
+    
+    .home .blog-info { text-align: left; }
+}
+
+/* =========================================
+   NUEVO: REDES SOCIALES (CIRCULARES)
+   ========================================= */
+.home .social-buttons {
+    display: flex;
+    gap: 15px; /* Espacio entre bolitas */
+    margin-top: 20px; /* Separación del texto de arriba */
+}
+
+.home .social-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 40px;  /* Ancho del círculo */
+    height: 40px; /* Alto del círculo */
+    
+    background-color: #6fa9ff; /* El azul que pediste */
+    color: #ffffff; /* Icono blanco */
+    border-radius: 50%; /* Esto lo hace redondo */
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    
+    font-size: 18px; /* Tamaño del icono dentro del círculo */
+}
+
+/* Efecto al pasar el mouse (opcional, se ve bonito) */
+.home .social-btn:hover {
+    transform: translateY(-3px);
+    background-color: #003566; /* Se oscurece un poco al pasar el mouse */
+}
+
+/* =========================================
+   NUEVO: ICONOS DE CONTACTO (FONTAWESOME)
+   ========================================= */
+.home .contact-icon-fa {
+    color: #6fa9ff; /* Icono color azul cielo */
+    font-size: 18px; /* Tamaño del icono */
+    width: 25px; /* Ancho fijo para que el texto se alinee bien aunque el icono cambie */
+    text-align: center;
+}
+
+/* Ajuste Responsive para centrar las redes en celular */
+@media (max-width: 900px) {
+    .home .social-buttons {
+        justify-content: center;
+    }
+}
+
+/* =========================================
+   ESTILOS DE LA FLECHA AMARILLA
+   ========================================= */
+.home .arrow-icon {
+    color: #FEC00F; /* Amarillo solicitado */
+    font-size: 16px;
+    font-weight: 900; /* Para que se vea gruesa */
+    margin-right: 12px; /* Espacio entre flecha y texto */
+    flex-shrink: 0; /* Evita que la flecha se aplaste */
+}
+
+/* Ajustes específicos para que alinear la flecha en el Blog */
+.home .blog-item {
+    display: flex;
+    align-items: center; /* Centrar verticalmente flecha y texto */
+    gap: 0px; /* El margen lo da la flecha */
+    margin-bottom: 20px;
+}
+
+/* Eliminamos estilos viejos que puedan estorbar */
+.home .title-decoration {
+    display: none; /* Oculta las decoraciones viejas de los títulos si aún existen */
+}

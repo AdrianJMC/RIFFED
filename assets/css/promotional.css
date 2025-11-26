@@ -1,0 +1,188 @@
+/* ARCHIVO: promotional.css
+   Sección con Olas Repetitivas (Patrón) + Diseño Horizontal
+*/
+
+/* 1. CONFIGURACIÓN PRINCIPAL */
+.home .promocional-container {
+    /* --- AJUSTES --- */
+    --color-azul: #6fa9ff;
+
+    /* ¿Qué tan grandes quieres las olitas? */
+    --ancho-ola: 20px;
+    /* Ancho de cada curvita individual */
+    --alto-ola: 30px;
+    /* Alto de la ola */
+
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 2. LA MAGIA DE LA OLA REPETITIVA */
+.ola-repetida {
+    width: 100%;
+    height: var(--alto-ola);
+    background-color: var(--color-azul);
+    /* Usa el azul configurado */
+
+    /* Patrón de onda sinusoidal perfecta para repetir */
+    --mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 120 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10 Q 30 0 60 10 T 120 10 V20 H0 Z' fill='%23000'/%3E%3C/svg%3E");
+
+    /* Configuración de la máscara */
+    -webkit-mask-image: var(--mask);
+    mask-image: var(--mask);
+
+    /* Repetir horizontalmente (el truco para que sean muchas olitas) */
+    -webkit-mask-repeat: repeat-x;
+    mask-repeat: repeat-x;
+
+    /* Tamaño: Ancho variable / 100% alto */
+    -webkit-mask-size: 80px 100%;
+    mask-size: 80px 100%;
+
+    position: relative;
+    z-index: 2;
+}
+
+/* Ola superior (Apunta hacia abajo, visualmente conecta con el fondo) */
+.ola-repetida.top {
+    /* Invertimos la máscara para que la curva quede suave arriba */
+    transform: none;
+    /* Pegado perfecto */
+}
+
+/* Ola inferior (Apunta hacia abajo) */
+.ola-repetida.bottom {
+    transform: rotate(180deg); /* ← ESTA SÍ SE INVIERTE */
+    /* Pegado perfecto */
+}
+
+.ola-repetida.top {
+    margin-bottom: -10px;
+}
+
+.ola-repetida.bottom {
+    margin-top: -10px;
+}
+
+/* 3. FONDO SÓLIDO CENTRAL */
+.home .promocional {
+    background-color: var(--color-azul);
+    width: 100%;
+    padding: 20px 0;
+    /* Espacio interno */
+}
+
+/* 4. LAYOUT HORIZONTAL (Mascota - Texto) */
+.home .promo-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    /* Elementos lado a lado */
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    /* Separación entre mascota y texto */
+
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Mascota (Izquierda) --- */
+.home .mascota-container {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Círculo blanco */
+.home .fondo-mascota {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.home .mascota-img {
+    position: relative;
+    z-index: 2;
+    width: 200%;
+    margin-left: 2vw;
+    height: auto;
+    object-fit: contain;
+}
+
+/* --- Texto (Derecha) --- */
+.home .info-container {
+    text-align: center;
+    /* Alineado a la izquierda como la imagen */
+    max-width: 550px;
+    color: #ffffff;
+}
+
+.home .titulo-promo {
+    font-family: "Poppins", Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 1.2;
+    margin: 0 0 10px 0;
+}
+
+.home .subtitulo-promo {
+    font-family: "Poppins", Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    margin: 20px 0 25px 0;
+    opacity: 0.95;
+}
+
+/* Botón estilo Cartoon */
+.home .btn-unete {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: "Poppins", Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    padding: 14px 60px;
+    border-radius: 12px;
+    border: 3px solid #000000;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.home .btn-unete:hover {
+    transform: translateY(-2px);
+    background-color: #003566;
+    color:#ffffff;
+    border: 3px solid #ffffff;
+    box-shadow: 4px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .home .promo-content-wrapper {
+        flex-direction: column;
+        /* En celular, uno debajo del otro */
+        text-align: center;
+        gap: 40px;
+    }
+
+    .home .info-container {
+        text-align: center;
+        align-items: center;
+    }
+}

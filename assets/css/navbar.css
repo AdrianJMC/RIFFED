@@ -3,23 +3,22 @@
 /* ==================================== */
 
 .home .navbar {
-    /* Usamos Flexbox para distribuir elementos */
+    /* POSICIONAMIENTO CLAVE */
+    position: fixed;  /* Se queda fijo al hacer scroll y se coloca sobre todo */
+    top: 0;
+    left: 0;
+    z-index: 1000;    /* Número alto para ganar a las capas del slider (que tienen 5) */
+    
+    /* ESTILOS VISUALES (los que ya tenías) */
     display: flex;
     align-items: center;
-    /* Alinea verticalmente al centro */
     justify-content: space-between;
-    /* Distribuye espacio entre los grupos */
-
-    position: relative;
-    /* Se mantiene en el flujo normal del documento */
     width: 100%;
     height: 90px;
-    /* Altura fija para la versión de escritorio */
     padding: 0 20px;
     background-color: #6fa9ff;
     border-bottom: 3px solid #003566;
     box-sizing: border-box;
-    /* Asegura que el padding no afecte el ancho total */
 }
 
 /* ------------------------------------ */
@@ -141,19 +140,46 @@
 
 /* Botón Iniciar Sesión */
 .login-button {
+    /* ESTRUCTURA */
     position: relative;
     width: 150px;
     height: 37px;
+    cursor: pointer; /* Hace que aparezca la manita al pasar el mouse */
+    
+    /* ESTILOS VISUALES (Traídos del rectangle-13) */
+    background-color: #ffffff;
+    border: 2.5px solid #003566;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+    /* ALINEACIÓN DE TEXTO (Flexbox centra perfecto sin usar position absolute) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* TIPOGRAFÍA (Traída del text-wrapper-32) */
+    font-family: "Poppins", Helvetica, sans-serif; /* Asegúrate de que cargue la fuente */
+    font-weight: 800; /* ExtraBold */
+    font-size: 16px;
+    color: #000000;
+    
+    /* ANIMACIÓN */
+    transition: all 0.3s ease; /* Suaviza el cambio de color */
 }
 
-.home .rectangle-13 {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff;
-    border-radius: 10px;
-    border: 2.5px solid #003566;
-    box-shadow: 0px 4px 4px #00000040, 0px 4px 4px #00000040;
+/* ESTADO HOVER (Al pasar el mouse) */
+.login-button:hover {
+    background-color: #003566; /* El fondo se vuelve azul oscuro */
+    color: #ffffff;            /* El texto se vuelve blanco para contraste */
+    border-color: #ffffff;     /* El borde se mantiene o cambia si quieres */
+    transform: translateY(-2px); /* Efecto opcional: sube un poquito */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3); /* La sombra crece un poco */
+}
+
+/* IMPORTANTE: Elimina las clases viejas para que no estorben */
+.home .rectangle-13,
+.home .text-wrapper-32 {
+    display: none;
 }
 
 .home .text-wrapper-32 {
