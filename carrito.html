@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito de Compras | RIFFED</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/globals.css" />
+    <link rel="stylesheet" href="assets/css/styleguide.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/promotional.css" />
+
+    <link rel="stylesheet" href="assets/css/carrito.css" />
+
+    <script src="assets/js/navbar.js"></script>
+</head>
+
+<body>
+    <div class="home">
+
+        <div class="navbar">
+
+            <div class="logo-area" onclick="location.href='index.html';" style="cursor: pointer;">
+                <div class="ellipse-2"></div>
+                <img class="logo-3" src="assets/img/Logo2.png" alt="Logo RIFFED" />
+                <div class="text-wrapper-27">RIFFED</div>
+            </div>
+
+            <div class="search-area">
+                <div class="rectangle-12"></div>
+                <div class="text-wrapper-28">Buscador</div>
+                <img class="search" src="assets/img/lupa.png" alt="Icono Buscador" />
+            </div>
+
+            <div class="nav-actions">
+                <a href="index.html" class="nav-link">
+                    <i class="fa-solid fa-house nav-icon"></i>
+                    <span class="nav-text">Inicio</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <i class="fa-solid fa-certificate nav-icon"></i>
+                    <span class="nav-text">Ofertas</span>
+                </a>
+
+                <a href="carrito.html" class="nav-link active"> <i class="fa-solid fa-cart-shopping nav-icon"></i>
+                    <span class="nav-text">Carrito</span>
+                </a>
+
+                <a href="Login.html">
+                    <button class="login-button">
+                        Iniciar Sesión
+                    </button>
+                </a>
+            </div>
+
+            <div class="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+
+        <main class="cart-main-content">
+
+            <div class="cart-wrapper">
+                <h1 class="page-title">Carrito de Compras</h1>
+
+                <div class="cart-layout">
+
+                    <section class="cart-items-section">
+                        <h2 class="section-heading">Productos en tu pedido</h2>
+
+                        <div id="cart-items-container" class="cart-list">
+                            <div class="empty-cart-msg">
+                                <i class="fa-solid fa-basket-shopping"></i>
+                                <p>Cargando tu estilo...</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <aside class="order-summary-section">
+                        <h2 class="section-heading">Resumen de la Orden</h2>
+
+                        <div class="summary-card">
+                            <div class="summary-line">
+                                <span>Subtotal</span>
+                                <span id="subtotal-amount">$0.00</span>
+                            </div>
+                            <div class="summary-line">
+                                <span id="total-items-count">0 productos</span>
+                                <span></span>
+                            </div>
+                            <div class="summary-line">
+                                <span>Envío</span>
+                                <span id="shipping-cost">$0.00</span>
+                            </div>
+
+                            <div class="summary-separator"></div>
+
+                            <div class="summary-line total-line">
+                                <span>Total:</span>
+                                <span id="total-amount">$0.00</span>
+                            </div>
+
+                            <button class="checkout-button">Pagar Ahora</button>
+
+                            <a href="index.html" class="continue-shopping">
+                                <i class="fa-solid fa-arrow-left"></i> Seguir Comprando
+                            </a>
+                        </div>
+                    </aside>
+
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-column brand-col">
+                    <div class="logo-area">
+                        <img class="logo-img" src="assets/img/Logo2.png" alt="RIFFED Logo" />
+                        <span class="logo-text">RIFFED</span>
+                    </div>
+                    <p class="brand-desc">
+                        Vive la música con RIFFED.<br>
+                        Ropa, accesorios y equipo técnico para quienes crean su propio sonido.
+                    </p>
+                    <div class="social-buttons">
+                        <a href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-btn"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-btn"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="col-title">Quick Link</h4>
+                    <ul class="footer-links">
+                        <li><i class="fa-solid fa-chevron-right arrow-icon"></i> Inicio</li>
+                        <li><i class="fa-solid fa-chevron-right arrow-icon"></i> Sobre Nosotros</li>
+                        <li><i class="fa-solid fa-chevron-right arrow-icon"></i> Términos y Condiciones</li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="col-title">Blog</h4>
+                    <div class="blog-item">
+                        <i class="fa-solid fa-chevron-right arrow-icon"></i>
+                        <div class="blog-info">
+                            <span class="date">8 Nov, 2025</span>
+                            <p>5 Tips para cuidar tu guitarra.</p>
+                        </div>
+                    </div>
+                    <div class="blog-item">
+                        <i class="fa-solid fa-chevron-right arrow-icon"></i>
+                        <div class="blog-info">
+                            <span class="date">2 Nov, 2025</span>
+                            <p>El equipo esencial para tu Home Studio.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="col-title">Contacto</h4>
+                    <ul class="contact-list">
+                        <li><i class="fa-solid fa-location-dot contact-icon-fa"></i> 44 Danwers, NY City, USA</li>
+                        <li><i class="fa-solid fa-envelope contact-icon-fa"></i> Teamriffed@gmail.com</li>
+                        <li><i class="fa-solid fa-phone contact-icon-fa"></i> 91+585-656-658</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom-container">
+                <div class="ola-footer"></div>
+                <div class="copyright-bar">
+                    <p>© 2025 RIFFED. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

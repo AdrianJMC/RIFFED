@@ -1,34 +1,33 @@
 /* ==================================== */
-/* 1. Base y Navbar            */
+/* 1. Base y Navbar (Se mantiene igual) */
 /* ==================================== */
 
 .home .navbar {
-    /* POSICIONAMIENTO CLAVE */
-    position: fixed;  /* Se queda fijo al hacer scroll y se coloca sobre todo */
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;    /* Número alto para ganar a las capas del slider (que tienen 5) */
+    z-index: 1000;
     
-    /* ESTILOS VISUALES (los que ya tenías) */
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     height: 90px;
     padding: 0 20px;
-    background-color: #6fa9ff;
+    background-color: #6fa9ff; /* Tu color azul original */
     border-bottom: 3px solid #003566;
     box-sizing: border-box;
 }
 
-/* ------------------------------------ */
-/* 2. Logo Area               */
-/* ------------------------------------ */
+/* ==================================== */
+/* 2. Logo Area (Ajustado cursor)       */
+/* ==================================== */
 
 .logo-area {
     display: flex;
     align-items: center;
     gap: 10px;
+    cursor: pointer; /* Para indicar que es clicable */
 }
 
 .home .ellipse-2 {
@@ -36,45 +35,38 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    /* Usamos 50% para un círculo perfecto */
     background-color: #ffffff;
 }
 
 .home .logo-3 {
     position: absolute;
     top: 18px;
-    /* Ajuste manual para centrar sobre el ellipse-2 */
     left: 25px;
     width: 50px;
     height: 50px;
 }
 
 .home .text-wrapper-27 {
-    /* RIFFED */
     font-family: "Poppins-ExtraBold", Helvetica;
     font-weight: 800;
     color: #ffffff;
     font-size: 28px;
     margin-left: 5px;
-    /* Ajuste para separar del logo */
 }
 
-/* ------------------------------------ */
-/* 3. Search Area             */
-/* ------------------------------------ */
+/* ==================================== */
+/* 3. Search Area (Se mantiene igual)   */
+/* ==================================== */
 
 .search-area {
     position: relative;
     width: 35%;
-    /* Ocupa 35% del ancho de la Navbar */
     max-width: 550px;
     display: flex;
-    /* Para controlar el buscador y la lupa */
     align-items: center;
 }
 
 .home .rectangle-12 {
-    /* Barra de input */
     position: relative;
     width: 100%;
     height: 40px;
@@ -84,125 +76,129 @@
 }
 
 .home .text-wrapper-28 {
-    /* Texto Buscador */
     position: absolute;
     left: 10px;
     font-family: "Istok Web-Bold", Helvetica;
     font-weight: 700;
     color: #626262;
     font-size: 16px;
+    pointer-events: none; /* Para que no estorbe al hacer clic en el input */
 }
 
 .home .search {
-    /* Icono de Lupa */
     position: absolute;
     right: 10px;
     width: 25px;
     height: 25px;
 }
 
-/* ------------------------------------ */
-/* 4. Navigation Actions          */
-/* ------------------------------------ */
+/* ==================================== */
+/* 4. Navigation Actions (MODIFICADO)   */
+/* ==================================== */
 
 .nav-actions {
     display: flex;
     align-items: center;
     gap: 25px;
-    /* Espacio entre links y botón */
 }
 
+/* Estilo para los nuevos enlaces <a> */
 .nav-link {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Icono arriba, texto abajo */
     align-items: center;
     text-align: center;
+    text-decoration: none; /* Quita la línea de link */
     cursor: pointer;
+    transition: transform 0.2s ease;
 }
 
-.nav-link img {
-    width: 25px;
-    height: 25px;
+.nav-link:hover {
+    transform: scale(1.1); /* Efecto zoom ligero */
 }
 
-.home .text-wrapper-29,
-.home .text-wrapper-30,
-.home .text-wrapper-31 {
-    font-family: "Istok Web-Bold", Helvetica;
+/* Estilo para los iconos de FontAwesome */
+.nav-link i {
+    font-size: 24px;   /* Tamaño similar a tus imágenes de 25px */
+    color: #ffffff;    /* Color blanco como tu texto original */
+    margin-bottom: 5px;
+}
+
+/* Efecto hover en el icono */
+.nav-link:hover i {
+    color: #000000; /* Se pone azul oscuro al pasar el mouse */
+}
+
+/* Estilo para el texto (Inicio, Ofertas, Carrito) */
+.nav-text {
+    font-family: "Poppins-ExtraBold", Helvetica; /* Tu fuente original */
     font-weight: 700;
-    color: #ffffff;
+    color: #ffffff;    /* Color blanco */
     font-size: 14px;
-    margin-top: 5px;
-    position: relative;
-    top: auto;
-    left: auto;
 }
 
-/* Botón Iniciar Sesión */
+.nav-text:hover {
+    color: #000000;
+}
+
+/* Cambia el color del texto al pasar el mouse sobre el contenedor */
+.nav-link:hover .nav-text {
+    color: #000000;
+}
+
+/* ==================================== */
+/* 5. Botón Iniciar Sesión (MODIFICADO) */
+/* ==================================== */
+
+/* El enlace que envuelve al botón */
+a[href="Login.html"] {
+    text-decoration: none;
+}
+
 .login-button {
-    /* ESTRUCTURA */
-    position: relative;
+    /* Dimensiones originales */
     width: 150px;
     height: 37px;
-    cursor: pointer; /* Hace que aparezca la manita al pasar el mouse */
+    cursor: pointer;
     
-    /* ESTILOS VISUALES (Traídos del rectangle-13) */
+    /* Estilos Visuales */
     background-color: #ffffff;
     border: 2.5px solid #003566;
     border-radius: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     
-    /* ALINEACIÓN DE TEXTO (Flexbox centra perfecto sin usar position absolute) */
+    /* Centrado del texto */
     display: flex;
     justify-content: center;
     align-items: center;
     
-    /* TIPOGRAFÍA (Traída del text-wrapper-32) */
-    font-family: "Poppins", Helvetica, sans-serif; /* Asegúrate de que cargue la fuente */
-    font-weight: 800; /* ExtraBold */
+    /* Tipografía */
+    font-family: "Poppins", Helvetica, sans-serif;
+    font-weight: 800;
     font-size: 16px;
     color: #000000;
     
-    /* ANIMACIÓN */
-    transition: all 0.3s ease; /* Suaviza el cambio de color */
+    transition: all 0.3s ease;
 }
 
-/* ESTADO HOVER (Al pasar el mouse) */
 .login-button:hover {
-    background-color: #003566; /* El fondo se vuelve azul oscuro */
-    color: #ffffff;            /* El texto se vuelve blanco para contraste */
-    border-color: #ffffff;     /* El borde se mantiene o cambia si quieres */
-    transform: translateY(-2px); /* Efecto opcional: sube un poquito */
-    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3); /* La sombra crece un poco */
+    background-color: #003566;
+    color: #ffffff;
+    border-color: #ffffff;
+    transform: translateY(-2px);
 }
 
-/* IMPORTANTE: Elimina las clases viejas para que no estorben */
-.home .rectangle-13,
-.home .text-wrapper-32 {
-    display: none;
-}
+/* ==================================== */
+/* 6. Menú Hamburguesa (Móvil)          */
+/* ==================================== */
 
-.home .text-wrapper-32 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: "Poppins-ExtraBold", Helvetica;
-    font-weight: 800;
-    color: #000000;
-    font-size: 16px;
-    white-space: nowrap;
-}
-
-/* Botón Hamburguesa (Oculto en Escritorio) */
 .menu-toggle {
-    display: none;
-    /* Oculto por defecto */
+    display: none; /* Oculto en escritorio */
     cursor: pointer;
     width: 30px;
-    height: 30px;
+    height: 24px; /* Ajustado */
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     z-index: 200;
 }
 
@@ -216,7 +212,7 @@
 }
 
 /* ==================================== */
-/* 5. Media Queries (Móvil)     */
+/* 7. Media Queries (Móvil)             */
 /* ==================================== */
 
 @media (max-width: 768px) {
@@ -224,130 +220,109 @@
     .home .navbar {
         height: 65px;
         padding: 0 5%;
-        justify-content: space-between;
-        /* Alinear logo a la izquierda y menú a la derecha */
     }
 
-    /* Hacemos que el Logo RIFFED se centre */
+    /* Ajustes del Logo en móvil */
     .logo-area {
-        width: 100%;
+        width: auto;
         justify-content: flex-start;
-        /* Logo a la izquierda */
     }
 
     .home .ellipse-2 {
-        position: relative;
         width: 50px;
         height: 50px;
-        border-radius: 50%;
-        /* Usamos 50% para un círculo perfecto */
-        background-color: #ffffff;
     }
 
     .home .logo-3 {
-        position: absolute;
         top: 12px;
-        /* Ajuste manual para centrar sobre el ellipse-2 */
         left: 25px;
         width: 40px;
         height: 40px;
     }
 
     .home .text-wrapper-27 {
-        /* Ajuste para que el nombre RIFFED se vea centrado en relación con la pantalla */
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
         font-size: 20px;
-        margin: 0;
+        /* En móvil quitamos el margin raro y dejamos flex gap */
+        position: static; 
+        transform: none;
     }
 
-    /* OCULTAR ELEMENTOS DE ESCRITORIO */
+    /* Ocultar elementos de escritorio */
     .search-area,
     .nav-actions {
         display: none;
     }
 
-    /* MOSTRAR BOTÓN HAMBURGUESA */
+    /* Mostrar botón menú */
     .menu-toggle {
         display: flex;
     }
 
-    /* MENÚ DESPLEGABLE PARA MÓVIL (OFF-CANVAS) */
+    /* --- MENÚ DESPLEGABLE MÓVIL --- */
+    
+    /* Estado Cerrado (oculto a la derecha) */
     .nav-actions {
-        /* Posicionamiento y estilos para el menú lateral */
         position: fixed;
         top: 65px;
-        /* Debajo de la navbar */
-        right: 0;
-        height: calc(100vh - 65px);
-        /* Altura de la ventana - altura de la navbar */
+        right: -100%; /* Fuera de pantalla */
         width: 70%;
         max-width: 300px;
-        background-color: #003566;
-        /* Fondo oscuro para el menú */
+        height: calc(100vh - 65px);
+        background-color: #003566; /* Fondo azul oscuro */
         flex-direction: column;
-        padding: 30px 0;
+        padding: 40px 20px;
         align-items: flex-start;
         gap: 30px;
-
-        /* Inicialmente fuera de la pantalla */
-        transform: translateX(100%);
+        transition: right 0.3s ease; /* Animación suave */
+        display: flex !important; /* Forzar display flex para que funcione la animación */
     }
 
+    /* Estado Abierto (Clase que agrega JS) */
     .nav-actions.is-open {
-        display: flex;
-        position: fixed;
-        top: 65px;
-        right: 0;
-        width: 70%;
-        max-width: 300px;
-        height: calc(100vh - 65px);
-        background-color: #6fa9ff;
-        flex-direction: column;
-        padding: 30px 0;
-        gap: 30px;
-        transform: translateX(0);
+        right: 0; /* Entra a la pantalla */
+        background-color: #6fa9ff; /* Tu color de fondo activo */
     }
 
-    /* Estilos de los links en el menú móvil */
-    .nav-link,
+    /* Estilos de los links dentro del menú móvil */
+    .nav-link {
+        flex-direction: row; /* Icono al lado del texto */
+        gap: 15px;
+        width: 100%;
+        justify-content: flex-start;
+        padding-left: 10px;
+    }
+
+    .nav-link i {
+        font-size: 24px;
+        color: #ffffff;
+        margin-bottom: 0;
+    }
+
+    .nav-text {
+        font-size: 18px; /* Texto más grande para dedo */
+        color: #ffffff;
+    }
+
+    /* Botón Login en móvil */
+    a[href="Login.html"] {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
     .login-button {
         width: 100%;
-        padding: 10px 20px;
-        flex-direction: row;
-        justify-content: flex-start;
-        gap: 15px;
-    }
-
-    .nav-link img {
-        width: 25px;
-        height: 25px;
-    }
-
-    .home .text-wrapper-29,
-    .home .text-wrapper-30,
-    .home .text-wrapper-31,
-    .home .text-wrapper-32 {
-        color: #ffffff;
-        /* Texto blanco en fondo oscuro */
-        font-size: 16px;
-    }
-
-    /* Estilo especial para la opción de iniciar sesión en menú móvil */
-    .nav-actions .login-button {
+        height: 50px; /* Botón más grande */
         background-color: #ffffff;
-        height: 60px;
-        font-family: "Poppins-ExtraBold", Helvetica;
+        color: #000000;
     }
+}
 
-    .nav-actions .login-button .text-wrapper-32 {
-        color: #000000 !important;
-        /* Texto negro */
-    }
 
-    /* Ocultar rectángulo interno del botón (solo texto y fondo externo) */
-    .nav-actions .login-button .rectangle-13 {
-        display: none !important;
-    }
+/* Forzamos el color negro en el icono y el texto cuando está activo */
+.nav-link.active i,
+.nav-link.active .nav-text {
+    color: #000000 !important; /* Negro intenso */
+    font-weight: 800; /* Un poco más gordita la letra */
 }

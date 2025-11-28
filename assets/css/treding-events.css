@@ -43,6 +43,21 @@
     flex-direction: column;
     width: 100%;
     position: relative;
+    
+    /* --- NUEVAS LÍNEAS --- */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza la animación */
+    cursor: pointer; /* Cambia el cursor a manita para indicar que es clicable */
+}
+
+.home .event-card:hover {
+    /* Aumenta el tamaño al 105% (un 5% más grande) */
+    transform: scale(1.05); 
+    
+    /* Opcional: Eleva el z-index para que la tarjeta tape a las de al lado si se enciman */
+    z-index: 10; 
+    
+    /* Opcional: Agrega una sombra para dar efecto de que se levanta */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Clase especial para las tarjetas anchas de abajo */
@@ -94,14 +109,14 @@
     padding: 15px 8px;
     
     /* Para dar el efecto de que la imagen sale de arriba */
-    margin-top: -10px; 
+    margin-top: -8px; 
     z-index: 0;
     position: relative;
     
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 110px; /* Altura mínima similar a tu diseño original */
+    min-height: 90px; /* Altura mínima similar a tu diseño original */
 }
 
 /* Limitamos el ancho del texto para que no choque con el icono */
