@@ -210,3 +210,55 @@
     /* Sombra más grande y difusa para efecto 3D */
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3); 
 }
+
+/* =========================================
+   MEDIA QUERIES (RESPONSIVIDAD)
+   ========================================= */
+
+/* 1. TABLETS Y LAPTOPS PEQUEÑAS (Pantallas menores a 1024px) */
+@media screen and (max-width: 1024px) {
+    
+    .home .productos {
+        /* Cambiamos de 4 columnas a 2 columnas */
+        grid-template-columns: repeat(2, 1fr);
+        
+        /* Reducimos el ancho máximo para que no quede muy ancho en tablets */
+        max-width: 700px; 
+        margin-top: 70px;
+    }
+
+    .home .text-wrapper-23 {
+        /* Reducimos un poco el tamaño del título */
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+}
+
+/* 2. CELULARES (Pantallas menores a 600px) */
+@media screen and (max-width: 600px) {
+
+    .home .productos {
+        /* En celular, pasamos a 1 sola columna para que se vea bien */
+        grid-template-columns: 1fr;
+        
+        /* Ajustamos el gap (espacio) entre tarjetas */
+        gap: 40px;
+        padding: 10px;
+    }
+
+    .home .text-wrapper-23 {
+        /* Título más pequeño para celular */
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    /* Aseguramos que las tarjetas estén centradas y no se salgan */
+    .home .producto, .home .producto-2, .home .producto-3, 
+    .home .producto-4, .home .producto-5, .home .producto-6, 
+    .home .producto-7, .home .producto-8 {
+        /* Como tus tarjetas miden 250px fijos, esto asegura que 
+           si el celular es muy pequeño, no se rompa */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

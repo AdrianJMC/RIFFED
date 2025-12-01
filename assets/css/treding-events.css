@@ -3,12 +3,17 @@
    ========================================= */
 
 .home .treding-events-section {
-    position: relative; /* Ya no es absolute */
+    position: relative;
+    /* Ya no es absolute */
     width: 100%;
-    max-width: 1200px; /* Ancho máximo para desktop */
-    margin: 0 auto;    /* Centrado horizontal */
-    margin-top: 20px; /* Separación de la sección anterior */
-    margin-bottom: 100px; /* Separación del footer */
+    max-width: 1200px;
+    /* Ancho máximo para desktop */
+    margin: 0 auto;
+    /* Centrado horizontal */
+    margin-top: 20px;
+    /* Separación de la sección anterior */
+    margin-bottom: 100px;
+    /* Separación del footer */
     padding: 20px;
     box-sizing: border-box;
 }
@@ -21,7 +26,8 @@
     font-weight: 800;
     color: #000000;
     font-size: 48px;
-    margin-bottom: 50px; /* Espacio antes de las cartas */
+    margin-bottom: 50px;
+    /* Espacio antes de las cartas */
 }
 
 /* =========================================
@@ -30,8 +36,9 @@
 .home .events-grid {
     display: grid;
     /* Aquí definimos las 4 columnas exactas que pediste */
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 30px; /* Espacio entre tarjetas */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    /* Espacio entre tarjetas */
     width: 100%;
 }
 
@@ -43,19 +50,21 @@
     flex-direction: column;
     width: 100%;
     position: relative;
-    
+
     /* --- NUEVAS LÍNEAS --- */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza la animación */
-    cursor: pointer; /* Cambia el cursor a manita para indicar que es clicable */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Suaviza la animación */
+    cursor: pointer;
+    /* Cambia el cursor a manita para indicar que es clicable */
 }
 
 .home .event-card:hover {
     /* Aumenta el tamaño al 105% (un 5% más grande) */
-    transform: scale(1.05); 
-    
+    transform: scale(1.05);
+
     /* Opcional: Eleva el z-index para que la tarjeta tape a las de al lado si se enciman */
-    z-index: 10; 
-    
+    z-index: 10;
+
     /* Opcional: Agrega una sombra para dar efecto de que se levanta */
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
@@ -63,7 +72,7 @@
 /* Clase especial para las tarjetas anchas de abajo */
 /* Ocuparán 2 espacios de los 4 disponibles */
 .home .wide-card {
-    grid-column: span 2; 
+    grid-column: span 2;
 }
 
 /* --- Contenedor de la Imagen --- */
@@ -73,15 +82,18 @@
     /* Esto asegura que la imagen tenga su espacio antes de cargar */
     border-radius: 10px;
     overflow: hidden;
-    z-index: 1; /* Para que quede por encima del borde del recuadro blanco si se solapan */
+    z-index: 1;
+    /* Para que quede por encima del borde del recuadro blanco si se solapan */
 }
 
 .home .event-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* La imagen se adapta sin deformarse */
+    object-fit: cover;
+    /* La imagen se adapta sin deformarse */
     display: block;
-    aspect-ratio: 16/9; /* Mantiene una proporción rectangular */
+    aspect-ratio: 16/9;
+    /* Mantiene una proporción rectangular */
     border-radius: 10px;
 }
 
@@ -93,6 +105,7 @@
     width: 40px;
     height: 40px;
 }
+
 .home .music-icon img {
     width: 100%;
     height: 100%;
@@ -104,24 +117,26 @@
     background-color: #ffffff;
     border: 3px solid #000000;
     border-radius: 0px 0px 10px 10px;
-    
+
     /* Padding relativo en lugar de anchos fijos */
     padding: 15px 8px;
-    
+
     /* Para dar el efecto de que la imagen sale de arriba */
-    margin-top: -8px; 
+    margin-top: -8px;
     z-index: 0;
     position: relative;
-    
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 90px; /* Altura mínima similar a tu diseño original */
+    min-height: 90px;
+    /* Altura mínima similar a tu diseño original */
 }
 
 /* Limitamos el ancho del texto para que no choque con el icono */
 .home .info-text {
-    padding-right: 40px; /* Espacio a la derecha para el icono */
+    padding-right: 40px;
+    /* Espacio a la derecha para el icono */
 }
 
 /* Nombre del Artista */
@@ -129,7 +144,8 @@
     font-family: "Poppins-Bold", Helvetica;
     font-weight: 700;
     color: #000000;
-    font-size: 20px; /* Relativo a tu diseño */
+    font-size: 20px;
+    /* Relativo a tu diseño */
     margin: 0;
     margin-bottom: 5px;
     white-space: nowrap;
@@ -158,17 +174,103 @@
 
 /* --- EL NUEVO ICONO DE FONTAWESOME --- */
 .home .music-icon {
-    position: absolute; /* Posicionamiento absoluto */
-    right: 0px;        /* Pegado a la derecha del cuadro */
-    top: 77%;           /* Centrado verticalmente */
-    transform: translateY(-50%); /* Ajuste fino del centrado vertical */
-    
-    font-size: 20px;    /* Tamaño del icono */
-    color: #000000;     /* Color del icono (Negro) */
+    position: absolute;
+    /* Posicionamiento absoluto */
+    right: 0px;
+    /* Pegado a la derecha del cuadro */
+    top: 77%;
+    /* Centrado verticalmente */
+    transform: translateY(-50%);
+    /* Ajuste fino del centrado vertical */
+
+    font-size: 20px;
+    /* Tamaño del icono */
+    color: #000000;
+    /* Color del icono (Negro) */
 }
 
 /* Hacemos el icono más grande en las tarjetas anchas */
 .home .wide-card .music-icon {
     font-size: 45px;
     right: 30px;
+}
+
+/* =========================================
+   MEDIA QUERIES (TRENDING EVENTS)
+   ========================================= */
+
+/* 1. TABLETS (Pantallas medianas: menos de 1024px) */
+@media screen and (max-width: 1024px) {
+
+    .home .events-grid {
+        /* Cambiamos de 4 a 2 columnas */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    /* Agrega esto para forzar la posición correcta en tablets */
+    .home .music-icon,
+    .home .wide-card .music-icon {
+        top: 85%;
+        /* Bajamos el icono (antes estaba heredando el desktop) */
+        right: 15px;
+    }
+}
+
+/* 2. CELULARES (Pantallas pequeñas: menos de 600px) */
+@media screen and (max-width: 600px) {
+
+    .home .treding-events-section {
+        /* Reducimos márgenes generales */
+        margin-top: 10px;
+        margin-bottom: 50px;
+        padding: 15px;
+    }
+
+    .home .section-title {
+        /* Título de la sección más pequeño */
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    .home .events-grid {
+        /* Una sola columna: todo apilado verticalmente */
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    /* --- AJUSTE CRÍTICO PARA LAS TARJETAS ANCHAS --- */
+    .home .wide-card {
+        /* IMPORTANTE: Le decimos que deje de ocupar 2 columnas
+           y se comporte como una tarjeta normal */
+        grid-column: auto;
+    }
+
+    /* Ajustamos los textos gigantes de las tarjetas anchas
+       para que se vean proporcionales en el celular */
+    .home .wide-card .event-name {
+        font-size: 24px;
+        /* Bajamos de 32px a 24px */
+    }
+
+    .home .wide-card .event-details {
+        font-size: 18px;
+        /* Bajamos de 24px a 18px */
+    }
+
+    /* Ajustamos el icono de las tarjetas anchas */
+    .home .wide-card .music-icon {
+        font-size: 25px;
+        /* Icono más pequeño */
+        right: 10px;
+        /* Ajuste de posición */
+        top: 78%;
+        /* Mantenemos la alineación vertical */
+    }
+
+    /* Aseguramos que la imagen mantenga proporción en móvil */
+    .home .event-img {
+        aspect-ratio: 16/10;
+        /* Un poquito más alta en celular si quieres */
+    }
 }
