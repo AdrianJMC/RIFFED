@@ -3,28 +3,37 @@ body {
   padding: 0;
   width: 100vw;
   height: 100vh;
-  display: flex;       /* Esto centra la tarjeta */
+  display: flex;
+  /* Esto centra la tarjeta */
   justify-content: center;
   align-items: center;
-  overflow: hidden;    /* Adiós scroll */
+  overflow: hidden;
+  /* Adiós scroll */
   background-color: #d5d5d5;
 }
+
 /* AHORA .LOGIN ES LA TARJETA BLANCA DIRECTAMENTE */
 .login {
   position: relative;
-  width: 944px;        /* Ancho exacto de la tarjeta */
-  height: 503px;       /* Alto exacto de la tarjeta */
+  width: 944px;
+  /* Ancho exacto de la tarjeta */
+  height: 503px;
+  /* Alto exacto de la tarjeta */
   background-color: #ffffff;
   border-radius: 30px;
   border: 3px solid #000000;
-  box-shadow: 0px 10px 30px rgba(0,0,0,0.2); /* Sombra estética */
-  overflow: hidden;    /* Para que nada se salga de los bordes redondos */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  /* Sombra estética */
+  overflow: hidden;
+  /* Para que nada se salga de los bordes redondos */
 }
+
 /* ESTE ES EL TRUCO DE MAGIA */
 /* Selecciona todos los elementos dentro del login y los "jala" a la posición correcta */
-.login > * {
-  transform: translate(-159px, -88px); 
+.login>* {
+  transform: translate(-159px, -88px);
 }
+
 .login .rectangle {
   position: absolute;
   top: 88px;
@@ -44,15 +53,13 @@ body {
   width: 389px;
   height: 455px;
   border-radius: 20px;
-  background: linear-gradient(
-    327deg,
-    rgba(103, 161, 244, 1) 0%,
-    rgba(103, 161, 244, 1) 0%,
-    rgba(103, 161, 244, 1) 23%,
-    rgba(6, 59, 110, 1) 80%,
-    rgba(6, 59, 110, 1) 100%,
-    rgba(6, 59, 110, 1) 100%
-  );
+  background: linear-gradient(327deg,
+      rgba(103, 161, 244, 1) 0%,
+      rgba(103, 161, 244, 1) 0%,
+      rgba(103, 161, 244, 1) 23%,
+      rgba(6, 59, 110, 1) 80%,
+      rgba(6, 59, 110, 1) 100%,
+      rgba(6, 59, 110, 1) 100%);
 }
 
 .login .ellipse {
@@ -64,13 +71,13 @@ body {
   border-radius: 121px / 124px;
   border: 1px solid #000000;
   background-color: #ffffff;
-  display: flex;           
-  justify-content: center;  
-  align-items: center;     
-  overflow: hidden;     
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
   /* NUEVO: Cambia el cursor a manita y suaviza el hover */
   cursor: pointer;
-  transition: transform 0.3s ease;   
+  transition: transform 0.3s ease;
 }
 
 .login .ellipse:hover {
@@ -82,9 +89,9 @@ body {
 /* LA IMAGEN  */
 .login .ellipse img {
 
-  width: 90%;           
+  width: 90%;
   height: 95%;
-  object-fit: contain;  
+  object-fit: contain;
   border-radius: 50%;
 }
 
@@ -250,20 +257,26 @@ body {
   position: absolute;
   left: 256px;
   width: 47px;
-  height: 45px; /* Ajusté a 43px para coincidir con la altura de los inputs */
+  height: 45px;
+  /* Ajusté a 43px para coincidir con la altura de los inputs */
   background-color: #ffffff;
   border-radius: 10px 0px 0px 10px;
   border: 2px solid #626262;
-  
+
   /* --- CENTRADO DE LOS ÍCONOS --- */
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center;     /* Centra verticalmente */
-  
+  justify-content: center;
+  /* Centra horizontalmente */
+  align-items: center;
+  /* Centra verticalmente */
+
   /* --- ESTILO DEL ÍCONO --- */
-  color: #000000;  /* Color Negro */
-  font-size: 20px; /* Tamaño del ícono */
-  z-index: 10;     /* Asegura que queden encima de todo */
+  color: #000000;
+  /* Color Negro */
+  font-size: 20px;
+  /* Tamaño del ícono */
+  z-index: 10;
+  /* Asegura que queden encima de todo */
 }
 
 /* Posiciones individuales (se mantienen igual) */
@@ -320,9 +333,9 @@ body {
 .login .text-wrapper-3 {
   position: absolute;
   top: 482px;
-  width: 300px; 
-  left: 294px; 
-  
+  width: 300px;
+  left: 294px;
+
   font-family: "Poppins-ExtraBold", Helvetica;
   font-weight: 800;
   color: #5a5a5a;
@@ -335,15 +348,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px; /* Espacio entre la letra y las líneas */
+  gap: 15px;
+  /* Espacio entre la letra y las líneas */
 }
 
 /* Línea Izquierda */
 .login .text-wrapper-3::before {
   content: "";
-  flex: 1; /* Ocupa todo el espacio disponible */
-  height: 2px; /* Grosor de la línea */
-  background-color: #5a5a5a; /* Color de la línea */
+  flex: 1;
+  /* Ocupa todo el espacio disponible */
+  height: 2px;
+  /* Grosor de la línea */
+  background-color: #5a5a5a;
+  /* Color de la línea */
 }
 
 /* Línea Derecha */
@@ -494,16 +511,18 @@ body {
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease;
-  color: #000000; 
-  font-size: 20px; 
+  color: #000000;
+  font-size: 20px;
 }
 
 /* Efecto Hover */
 .login .btn-back:hover {
-  background-color: #000000; /* Fondo negro */
-  color: #ffffff;            /* Ícono blanco */
+  background-color: #000000;
+  /* Fondo negro */
+  color: #ffffff;
+  /* Ícono blanco */
   border-color: #000000;
-  
+
   /* Mantenemos tu corrección de posición + un pequeño zoom */
   transform: translate(-159px, -88px) scale(1.1);
 }
@@ -511,13 +530,18 @@ body {
 /* Contenedor que agrupa los 3 botones */
 .login .social-login {
   position: absolute;
-  top: 510px; /* Ajustado para estar debajo de la "O" */
-  left: 257px; /* Mismo inicio que los inputs */
-  width: 371px; /* Mismo ancho que los inputs para poder centrar */
-  
+  top: 510px;
+  /* Ajustado para estar debajo de la "O" */
+  left: 257px;
+  /* Mismo inicio que los inputs */
+  width: 371px;
+  /* Mismo ancho que los inputs para poder centrar */
+
   display: flex;
-  justify-content: center; /* Los centra en el medio del formulario */
-  gap: 20px; /* Espacio entre cada botón */
+  justify-content: center;
+  /* Los centra en el medio del formulario */
+  gap: 20px;
+  /* Espacio entre cada botón */
 }
 
 /* Estilo base de los botones redondos */
@@ -526,7 +550,8 @@ body {
   height: 35px;
   border-radius: 50%;
   background-color: #ffffff;
-  border: 2px solid #626262; /* Borde gris sutil */
+  border: 2px solid #626262;
+  /* Borde gris sutil */
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -538,7 +563,10 @@ body {
 /* Colores específicos y efectos Hover */
 
 /* Google */
-.login .social-btn.google { color: #DB4437; }
+.login .social-btn.google {
+  color: #DB4437;
+}
+
 .login .social-btn.google:hover {
   background-color: #DB4437;
   color: white;
@@ -546,7 +574,10 @@ body {
 }
 
 /* Facebook */
-.login .social-btn.facebook { color: #4267B2; }
+.login .social-btn.facebook {
+  color: #4267B2;
+}
+
 .login .social-btn.facebook:hover {
   background-color: #4267B2;
   color: white;
@@ -554,7 +585,10 @@ body {
 }
 
 /* Apple */
-.login .social-btn.apple { color: #000000; }
+.login .social-btn.apple {
+  color: #000000;
+}
+
 .login .social-btn.apple:hover {
   background-color: #000000;
   color: white;
@@ -563,8 +597,8 @@ body {
 
 /* Efecto de "saltito" al pasar el mouse (igual que tus otros botones) */
 .login .social-btn:hover {
-   /* Recordamos el transform global */
-   transform:  scale(1.1);
+  /* Recordamos el transform global */
+  transform: scale(1.1);
 }
 
 /* --- Decoración Esquina Inferior Izquierda --- */
@@ -574,23 +608,246 @@ body {
   left: 0;
   width: 70px;
   height: 70px;
-  
+
   /* ESTO ES LO QUE FALTABA: */
-  transform: none; /* Anula el movimiento de -159px y lo deja pegado a la esquina */
-  
+  transform: none;
+  /* Anula el movimiento de -159px y lo deja pegado a la esquina */
+
   /* Forma de cuarto de círculo */
   border-top-right-radius: 100%;
 
   /* Degradado */
-  background: linear-gradient(
-    to top right, 
-    #003566 0%, 
-    #4a8fe2 100%
-  );
-  
+  background: linear-gradient(to top right,
+      #003566 0%,
+      #4a8fe2 100%);
+
   /* Para que siga la curvatura de la tarjeta principal */
-  border-bottom-left-radius: 20px; 
-  
+  border-bottom-left-radius: 20px;
+
   /* Opcional: Asegura que quede detrás del texto si hubiera algo encima */
-  z-index: 1; 
+  z-index: 1;
+}
+
+/* =========================================
+   MEDIA QUERIES (RESPONSIVE LOGIN - FINAL)
+   ========================================= */
+
+@media screen and (max-width: 950px) {
+
+  /* 1. CONTENEDOR PRINCIPAL */
+  .login {
+    width: 90% !important;
+    height: auto !important;
+    min-height: 700px;
+    /* Un poco más alto para que quepa el logo */
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+
+    padding: 30px 20px 20px 20px !important;
+    /* Más padding arriba para la flecha */
+    box-sizing: border-box !important;
+  }
+
+  /* 2. RESET GENERAL ("El Anti-Truco") */
+  .login>* {
+    transform: none !important;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    margin: 0 !important;
+    /* Reseteamos márgenes */
+    margin-bottom: 10px !important;
+    /* Espacio base */
+  }
+
+  /* 3. ELEMENTOS A OCULTAR */
+  /* Quitamos .ellipse de esta lista para mostrar el logo */
+  .login .div,
+  .login .ellipse-2,
+  .login .ellipse-3,
+  .login .ellipse-4,
+  .login .ellipse-5,
+  .login .ellipse-6,
+  .login .ellipse-7,
+  .login .ellipse-8,
+  .login .rectangle,
+  .login .image,
+  .login .image-2,
+  .login .image-3,
+  .login .image-4,
+  .login .corner-decoration,
+  .login .rectangle-5,
+  .login .rectangle-6,
+  .login .mail,
+  .login .lock
+
+  /* Iconos input */
+    {
+    display: none !important;
+  }
+
+  /* 4. LA FLECHA DE RETROCESO (Arriba a la izquierda) */
+  .login .btn-back {
+    /* La sacamos del flujo normal para pegarla a la esquina */
+    position: absolute !important;
+    top: 20px !important;
+    left: 20px !important;
+    z-index: 100 !important;
+    margin: 0 !important;
+  }
+
+  /* 5. EL LOGO (.ellipse) - Ahora visible y pequeño */
+  .login .ellipse {
+    display: flex !important;
+    width: 70px !important;
+    height: 70px !important;
+    border-radius: 50% !important;
+    border: none !important;
+    box-shadow: none !important;
+
+    /* CAMBIO CLAVE: Ahora es el segundo elemento */
+    order: 2 !important;
+
+    /* Ajustamos márgenes para que no quede pegado al texto */
+    margin-top: 10px !important;
+    margin-bottom: 30px !important;
+  }
+
+  /* 6. TÍTULOS (Bienvenido e Iniciar Sesión) */
+  .login .bienvenido-de-nuevo {
+    width: 100% !important;
+    font-size: 24px !important;
+    text-align: center !important;
+    margin-bottom: 5px !important;
+    order: 2 !important;
+    /* Va después del logo */
+  }
+
+  .login .ellipse img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+  }
+
+  .login .iniciar-sesion {
+    width: 100% !important;
+    font-size: 18px !important;
+    text-align: center !important;
+    color: #000000 !important;
+    margin-bottom: 30px !important;
+    order: 3 !important;
+    top: 5vw !important;
+  }
+
+  /* 7. ETIQUETAS (Texto: Correo y Contraseña) */
+  /* Las alineamos a la izquierda para que coincidan con el input */
+  .login .correo-electronico,
+  .login .contrase-a {
+    width: 100% !important;
+    max-width: 350px !important;
+    /* Mismo ancho que los inputs */
+    text-align: left !important;
+    /* Alineado a la izquierda */
+    margin-bottom: 5px !important;
+    /* Pegadito al input de abajo */
+    font-size: 14px !important;
+    top: 5vw !important;
+  }
+
+  /* 8. INPUTS (Cajas de texto) */
+  .login .rectangle-2,
+  /* Input Correo */
+  .login .rectangle-3
+
+  /* Input Contraseña */
+    {
+    width: 100% !important;
+    max-width: 350px !important;
+    height: 50px !important;
+    border-radius: 10px !important;
+    padding-left: 15px !important;
+    /* Espacio para escribir */
+    box-sizing: border-box !important;
+    top: 5vw !important;
+  }
+
+  /* --- AQUÍ LA MAGIA DEL ORDEN --- */
+  /* Forzamos el orden visual exacto que pediste */
+
+  .login .correo-electronico {
+    order: 4 !important;
+  }
+
+  /* Texto Correo */
+  .login .rectangle-2 {
+    order: 5 !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* Input Correo */
+
+  .login .contrase-a {
+    order: 6 !important;
+  }
+
+  /* Texto Password */
+  .login .rectangle-3 {
+    order: 7 !important;
+    margin-bottom: 10px !important;
+  }
+
+  /* Input Password */
+
+  .login .rectangle-4 {
+    order: 8 !important;
+    margin-top: 40px !important;
+  }
+
+  /* Botón Ingresar */
+
+  .login .text-wrapper {
+    order: 9 !important;
+    width: 100% !important;
+    margin-top: 10px !important;
+  }
+
+  /* Olvidaste contraseña */
+
+  .login .text-wrapper-3 {
+    order: 10 !important;
+    width: 100% !important;
+    margin: 20px 0 !important;
+    display: flex !important;
+  }
+
+  /* O iniciar con */
+
+  .login .social-login {
+    order: 11 !important;
+    margin-bottom: 30px !important;
+  }
+
+  /* Botones Redes */
+
+  .login .no-tienes-una-cuenta {
+    order: 12 !important;
+    width: 100% !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Registrarse */
+
+  /* Estilos extra para botones e inputs en móvil */
+  .login .rectangle-4 {
+    width: 100% !important;
+    max-width: 350px !important;
+    height: 50px !important;
+    position: relative !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
 }
